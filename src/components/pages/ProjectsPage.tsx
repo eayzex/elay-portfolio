@@ -11,7 +11,7 @@ const ProjectsPage = () => {
       image: 'https://screendy-cdn.fra1.cdn.digitaloceanspaces.com/platfrom-v2/_files/file_1747235154927_Screenshot2025-05-14at160546.png',
       liveDemo: 'https://new-front-repo-3e9hsb3xe-eayzexs-projects.vercel.app/',
       github: 'https://github.com/eayzex/tridlle-final-project-fr.git',
-      category: 'Web App',
+      category: 'SetWeb',
       icon: Globe
     },
     {
@@ -22,7 +22,7 @@ const ProjectsPage = () => {
       image: 'https://screendy-cdn.fra1.cdn.digitaloceanspaces.com/platfrom-v2/_files/file_1746707185577_1confirmedphoto.png',
       liveDemo: 'https://1cnfrmd-front.vercel.app/',
       github: 'https://github.com/eayzex/1cnfrmd-front',
-      category: 'Web App',
+      category: 'SetWeb',
       icon:Globe
     },
     {
@@ -33,7 +33,7 @@ const ProjectsPage = () => {
       image: 'https://i.imgur.com/zFDRGsA.png',
       liveDemo: 'https://hotels-booking-vg4f.vercel.app/login',
       github: 'https://github.com/eayzex/hotels-booking-.git',
-      category: 'Mobile App',
+      category: 'SetWeb',
       icon: Globe  
     },
     {
@@ -44,7 +44,7 @@ const ProjectsPage = () => {
       image: 'https://screendy-cdn.fra1.cdn.digitaloceanspaces.com/platfrom-v2/_files/file_1748342924063_PhotoTalatyPay.jpeg',
       liveDemo: 'https://talaty-kappa.vercel.app/',
       github: 'https://github.com/eayzex/talaty.git',
-      category: 'Mobile App',
+      category: 'SetWeb',
       icon: Globe  
     },
   ];
