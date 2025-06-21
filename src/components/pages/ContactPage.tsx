@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, ExternalLink, Code } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github, Linkedin, ExternalLink, Code, Copy } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
 
 const ContactPage = () => {
@@ -214,7 +214,85 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <div className="text-slate-400 text-sm">{label}</div>
-                      {href ? (
+                      {label === 'Email' ? (
+                        <div className="flex items-center space-x-2">
+                          <a
+                            href={href}
+                            className="text-white hover:text-teal-400 transition-colors cursor-hover"
+                            data-cursor-type="hover"
+                          >
+                            {value}
+                          </a>
+                          <button
+                            onClick={() => {
+                              navigator.clipboard.writeText(value);
+                              toast({
+                                title: "Copied!",
+                                description: "Email address copied to clipboard.",
+                              });
+                            }}
+                            className="
+                              p-1.5
+                              rounded
+                              bg-transparent
+                              hover:bg-teal-50/10
+                              transition
+                              flex items-center
+                              focus:outline-none
+                              focus:ring-2 focus:ring-teal-400/50
+                              group
+                            "
+                            type="button"
+                            aria-label="Copy email"
+                            title="Copy email"
+                          >
+                            <Copy
+                              size={16}
+                              className="text-slate-400 group-hover:text-teal-400 transition"
+                              strokeWidth={2}
+                            />
+                          </button>
+                        </div>
+                      ) : label === 'Phone' ? (
+                        <div className="flex items-center space-x-2">
+                          <a
+                            href={href}
+                            className="text-white hover:text-teal-400 transition-colors cursor-hover"
+                            data-cursor-type="hover"
+                          >
+                            {value}
+                          </a>
+                          <button
+                            onClick={() => {
+                              navigator.clipboard.writeText(value);
+                              toast({
+                                title: "Copied!",
+                                description: "Phone number copied to clipboard.",
+                              });
+                            }}
+                            className="
+                              p-1.5
+                              rounded
+                              bg-transparent
+                              hover:bg-teal-50/10
+                              transition
+                              flex items-center
+                              focus:outline-none
+                              focus:ring-2 focus:ring-teal-400/50
+                              group
+                            "
+                            type="button"
+                            aria-label="Copy phone"
+                            title="Copy phone"
+                          >
+                            <Copy
+                              size={16}
+                              className="text-slate-400 group-hover:text-teal-400 transition"
+                              strokeWidth={2}
+                            />
+                          </button>
+                        </div>
+                      ) : href ? (
                         <a 
                           href={href}
                           className="text-white hover:text-teal-400 transition-colors cursor-hover"
